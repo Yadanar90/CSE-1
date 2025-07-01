@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thinking of You ❤️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm & Loving (Soft Pinks, Creams, and a touch of Gold) -->
+    <!-- Application Structure Plan: A single, centered message with a subtle, loving background. The user flow is direct: open the page, read the message. This simple structure is chosen for its immediate emotional impact and clarity. -->
+    <!-- Visualization & Content Choices: 
+        - Report Info: "I miss you and waiting for you" message. -> Goal: Convey emotion. -> Viz: Large, centered text. -> Interaction: None. -> Justification: Direct and clear communication of the sentiment. -> Method: HTML/CSS.
+        - Report Info: Loving background. -> Goal: Set mood. -> Viz: Soft gradient background. -> Interaction: None. -> Justification: Creates a warm and inviting atmosphere. -> Method: Tailwind CSS.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom right, #fef2f2, #ffe4e6); /* soft red-50 to pink-100 */
+        }
+        /* Keyframes for heart beat animation */
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+        /* Keyframes for heart shine animation (subtle glow) */
+        @keyframes shine {
+            0%, 100% { text-shadow: 0 0 5px rgba(239, 68, 68, 0.5); } /* red-500 with slight glow */
+            50% { text-shadow: 0 0 20px rgba(239, 68, 68, 0.8), 0 0 30px rgba(239, 68, 68, 0.6); }
+        }
+        .heart-animation {
+            animation: beat 1.5s infinite ease-in-out, shine 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen text-center p-4">
+
+    <div class="bg-white p-8 md:p-12 rounded-xl shadow-lg max-w-sm mx-auto transform transition-transform duration-300 hover:scale-105 border-2 border-pink-200">
+        <div class="text-6xl mb-6 heart-animation" style="color: #ef4444;">
+            ❤️
+        </div>
+        <h1 class="text-3xl md:text-4xl font-bold text-pink-600 mb-4">
+            My Dearest Leigh,
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-700 leading-relaxed">
+            I miss you and I'm waiting for you.
+        </p>
+        <p class="mt-6 text-slate-500 text-lg">
+            Thinking of you always.
+        </p>
+    </div>
+
+</body>
+</html>
